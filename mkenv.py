@@ -14,6 +14,7 @@ from argparse import ArgumentParser
 from pathlib import Path
 from string import digits
 from typing import List, NamedTuple
+import sys
 
 logger = logging.getLogger(__name__)
 
@@ -271,7 +272,10 @@ def picker(options, prompt="Select an option:", sep=". ", nargs=1, allow_quit=Fa
 
 def pick_versions(versions):
     logger.debug("Getting user selection for python version")
-    return picker(versions, prompt="Pick python version: ")
+    out = picker(versions, prompt="Pick python version: ", allow_quit=True)
+    if out is QUIT_SIGNAL:
+        sys.exit(0)
+    return out
 
 
 def pick_requirements():
