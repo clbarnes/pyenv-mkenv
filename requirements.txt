@@ -1,0 +1,7 @@
+# development dependencies
+
+black
+isort
+twine
+pipe2codeblock
+setuptools
