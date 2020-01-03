@@ -18,6 +18,7 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/clbarnes/pyenv-mkenv",
     author="Chris L. Barnes",
+    author_email="chrislloydbarnes@gmail.com",
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
@@ -29,7 +30,7 @@ setup(
         'Programming Language :: Python :: 3.8',
     ],
     keywords="pyenv virtualenv venv requirements",
-    py_modules=["mkenv.py"],
+    py_modules=["mkenv"],
     python_requires=">=3.6",
     entry_points={"console_scripts": ["mkenv=mkenv:main"]},
 )
